@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { label 'window_' }
     environment{
         SONARQUBE_SERVER = 'http://localhost:9000'
         SONAR_TOKEN = 'sqa_5be946c72d531e0c80697b3a3d8aee50d25bcd80'
