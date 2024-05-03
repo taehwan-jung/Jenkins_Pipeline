@@ -17,7 +17,7 @@ pipeline{
             post{
                 success{
                     emailext(
-                    mail to: "tehoan94@gmail.com"
+                    to: "tehoan94@gmail.com"
                     subject: "test status email"
                     body: "test was successful!"
                     attachmentsPattern: '**/Unite and integration tests/*.log'
@@ -38,7 +38,7 @@ pipeline{
             post{
                 success{
                     emailext(
-                    mail to: "tehoan94@gmail.com"
+                    to: "tehoan94@gmail.com"
                     subject: "security scanning status email"
                     body: "scanning was successful!"
                     attachmentsPattern: '**/Security Scan/*.log'
