@@ -22,6 +22,7 @@ pipeline{
                     subject: "Test Status Email",
                     body: "The test was successful!",
                     attachLog: true
+                    attachmentspattern: "**/target.txt", 
                     )
                 }
             }
@@ -43,6 +44,7 @@ pipeline{
                     subject: "Security scanning Status Email",
                     body: "Security scanning was successful!",
                     attachLog: true
+                    attachmentspattern: "**/target.txt", 
                     )
                 }
             }
