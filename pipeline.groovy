@@ -20,7 +20,10 @@ pipeline{
                     emailext(
                     to: 'tehoan94@gmail.com',
                     subject: "Test Status Email",
-                    body: "The test was successful!"
+                    body: "The test was successful!",
+                    attachLog: true,
+                    attachmentsPattern: '**/*.txt'
+                    
                     )
                 }
             }
@@ -40,7 +43,9 @@ pipeline{
                     emailext(
                     to: 'tehoan94@gmail.com',
                     subject: "Security scanning Status Email",
-                    body: "Security scanning was successful!"
+                    body: "Security scanning was successful!",
+                    attachLog: true,
+                    attachmentsPattern: '**/*.txt'
                     )
                 }
             }
