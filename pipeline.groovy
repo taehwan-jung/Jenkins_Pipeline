@@ -17,12 +17,13 @@ pipeline{
             }
             post{
                 success{
-                    emailext
+                    emailext(
                     to: 'tehoan94@gmail.com',
                     subject: "Test Status Email",
                     body: "The test was successful!",
                     attachLog: true
                     attachmentsPattern: "**/target.txt", 
+                    )
                 }
             }
         }
@@ -38,12 +39,13 @@ pipeline{
             }
             post{
                 success{
-                    emailext
+                    emailext(
                     to: 'tehoan94@gmail.com',
                     subject: "Security scanning Status Email",
                     body: "Security scanning was successful!",
                     attachLog: true
-                    attachmentsPattern: "**/target.txt", 
+                    attachmentsPattern: "**/target.txt",
+                    )
                 }
             }
         }
