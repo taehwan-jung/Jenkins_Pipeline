@@ -34,7 +34,7 @@ pipeline{
          stage('Security Scan'){
             steps{
                 echo "perform security scanning using sonarqube scanner"
-                bat "sonar-scanner -Dsonar.projectKey=your-project-key -Dsonar.sources=. -Dsonar.host.url=http:S{SONARQUBE_SERVER} -Dsonar.login=${SONAR_TOKEN}"
+                sh "C:/Users/user/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=your-project-key -Dsonar.sources=. -Dsonar.host.url=http:S{SONARQUBE_SERVER} -Dsonar.login=${SONAR_TOKEN}"
             }
             post{
                 success{
